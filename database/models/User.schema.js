@@ -17,9 +17,8 @@ const ProjectSchema = mongoose.Schema({
 });
 
 const UserModel = new mongoose.Schema({
-  fullName: { type: String, default: "" },
+  uuid: { type: String, default: "devconnect" },
   email: { type: String, default: "" },
-  contactNo: { type: Number, default: 1234567890 },
   projects: [{ type: ProjectSchema }],
 });
 
