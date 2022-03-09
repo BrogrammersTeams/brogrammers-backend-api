@@ -13,7 +13,7 @@ const getFile = (req, res) => {
 const createFile = async (req, res) => {
   const user = req.body;
 
-  console.log("Object is", obj);
+  console.log("Object is", user);
 
   const UserFromDatabase = await User.find({ email: user.email });
 
