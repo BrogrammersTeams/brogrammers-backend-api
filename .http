@@ -40,10 +40,9 @@ POST http://localhost:5000/file HTTP/1.1
 content-type: application/json
 
 {
-    "email":"atharva@gmail.com",
+    "email":"mhadsebhavesh@gmail.com",
     "project": {
-        "uuid":  "devconnect",
-        "projectName":  "fds"
+        "projectName":  "OM om om"
     },
     "file": {
         "type":".ts",
