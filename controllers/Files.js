@@ -13,6 +13,8 @@ const getFile = (req, res) => {
 const createFile = async (req, res) => {
   const user = req.body;
 
+  console.log("Object is", obj);
+
   const UserFromDatabase = await User.find({ email: user.email });
 
   if (!UserFromDatabase.length) return res.send("No such User");
