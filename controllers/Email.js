@@ -14,7 +14,9 @@ const createEmail = (req, res) => {
   console.log("oBJECT IS ", obj);
 
   if (obj.topic == "OTP") {
-    return sendOtp(obj);
+    const OTP = Math.floor(Math.random() * 1000000);
+    sendEmail(obj.to, obj.subject, `Your Otp is ${OTP}`);
+    return res.send({ otp: OTP });
   }
 
   res.send("Post request on /Email createEmail");
@@ -26,12 +28,6 @@ const updateEmail = (req, res) => {
 
 const deleteEmail = (req, res) => {
   res.send("Get request on /Email deleteEmail");
-};
-
-const sendOtp = async obj => {
-  const OTP = Math.floor(Math.random() * 1000000);
-  sendEmail(obj.to, obj.subject, `Your Otp is ${OTP}`);
-  return res.send({ otp: OTP });
 };
 
 module.exports = {

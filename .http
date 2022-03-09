@@ -29,7 +29,7 @@ content-type: application/json
 {
     "to":"atharva.r.bhagat@gmail.com",
     "subject":"baray",
-    "topic":"Working"
+    "topic":"OTP"
 }
 
 ###
