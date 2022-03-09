@@ -31,8 +31,28 @@ content-type: application/json
     "subject":"baray",
     "topic":"Working"
 }
+
 ###
-GET http://localhost:5000/project/l/?email=atharva@gmail.com HTTP/1.1
+GET http://localhost:5000/file HTTP/1.1
+
+###
+POST http://localhost:5000/file HTTP/1.1
+content-type: application/json
+
+{
+    "email":"atharva@gmail.com",
+    "project": {
+        "uuid":  "devconnect",
+        "projectName":  "fds"
+    },
+    "file": {
+        "type":".ts",
+        "name":"baray.ts",
+        "content":"console.log()"
+    }
+}
+###
+GET http://localhost:5000/project/l/?email=bhaveshmhadse9@gmail.com HTTP/1.1
 
 ###
 POST http://localhost:5000/project HTTP/1.1
