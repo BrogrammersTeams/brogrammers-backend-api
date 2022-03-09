@@ -6,7 +6,7 @@ const route = express.Router();
 
 route.route("/").get(getAllProjects);
 route.route("/").post(createProject);
-route.route("/:id").get(getProject);
+route.route("/:email").get(getProject);
 route.route("/:id").patch(updateProject);
 route.route("/:id").delete(deleteProject);
 
