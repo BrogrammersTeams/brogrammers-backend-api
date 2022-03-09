@@ -10,7 +10,12 @@ const getEmail = (req, res) => {
 
 const createEmail = (req, res) => {
   const obj = req.body;
-  sendEmail(obj.to, obj.subject, obj.topic);
+
+  if (obj.topic == "OTP") {
+    const OTP = Math.floor(Math.random() * 1000000);
+    sendEmail(obj.to, obj.subject, `Your Otp is ${OTP}`);
+    return res.send({ otp: OTP });
+  }
   res.send("Post request on /Email createEmail");
 };
 
