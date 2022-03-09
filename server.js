@@ -3,6 +3,8 @@ const cors = require("cors");
 
 const app = express();
 
+require("./database/mongo");
+
 // Route Handlers
 const HomeRoute = require("./routes/Home");
 const EmailRoute = require("./routes/Email");
