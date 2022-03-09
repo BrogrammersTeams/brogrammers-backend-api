@@ -5,8 +5,14 @@ const getAllProjects = async (req, res) => {
   res.send(projects);
 };
 
-const getProject = (req, res) => {
-  res.send("Get request on /Project getProject");
+const getProject = async (req, res) => {
+  let user = await User.find({ email: req.body.email });
+
+  if (user.length) {
+    return res.send(user);
+  }
+
+  res.send("No Such User");
 };
 
 const createProject = async (req, res) => {
