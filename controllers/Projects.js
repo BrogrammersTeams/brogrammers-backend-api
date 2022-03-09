@@ -8,7 +8,8 @@ const getAllProjects = async (req, res) => {
 };
 
 const getProject = async (req, res) => {
-  let user = await User.find({ email: req.query.email });
+  const query = req.query;
+  let user = await User.find({ query });
 
   if (user.length) {
     return res.send(user);
