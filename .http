@@ -17,9 +17,7 @@ POST http://localhost:5000/user HTTP/1.1
 content-type: application/json
 
 {
-    "to":"atharva.r.bhagat@gmail.com",
-    "subject":"baray",
-    "topic":"Working"
+    "email":"bhaveshmhadse9@gmail.com"
 }
 ###
 GET http://localhost:5000/email HTTP/1.1
@@ -32,4 +30,27 @@ content-type: application/json
     "to":"atharva.r.bhagat@gmail.com",
     "subject":"baray",
     "topic":"Working"
+}
+###
+GET http://localhost:5000/project HTTP/1.1
+
+###
+POST http://localhost:5000/project HTTP/1.1
+content-type: application/json
+
+{
+    "email":"bhaveshmhadse9@gmail.com",
+    "project": {
+        "uuid":  "devconnect",
+        "projectName":  "deconnectProject",
+        "projectDescription":  "devconnectProjectDescription",
+        "projectLink": "devconnectProjectLink",
+        "tags": ["html", "js"],
+        "contributors": ["bhavesh", "athya", "akshya", "siddhi"],
+        "files": [{
+            "type":".py",
+            "name":"baray.py",
+            "content":"def baray:"
+        }]
+    }
 }

@@ -7,7 +7,11 @@ const FileSchema = mongoose.Schema({
 });
 
 const ProjectSchema = mongoose.Schema({
+  uuid: { type: String, default: "devconnect" },
   projectName: { type: String, default: "devconnect" },
+  projectDescription: { type: String, default: "devconnect" },
+  projectLink: { type: String, default: "devconnect" },
+  tags: [{ type: String, default: [] }],
   contributors: [{ type: String, default: ["bhavesh", "athya", "akshya", "siddhi"] }],
   files: [{ type: FileSchema }],
 });
@@ -32,6 +36,7 @@ module.exports = User;
 
     "projects": [
       {
+        
         "projectName": "devfolio",
         "contributors": ["Akshay", "Atharva", "Siddhi", "Bhavesh"],
         "files": [
