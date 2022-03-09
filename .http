@@ -32,7 +32,7 @@ content-type: application/json
     "topic":"Working"
 }
 ###
-GET http://localhost:5000/project HTTP/1.1
+GET http://localhost:5000/project/l/?email=atharva@gmail.com HTTP/1.1
 
 ###
 POST http://localhost:5000/project HTTP/1.1
