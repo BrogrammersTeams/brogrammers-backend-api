@@ -1,6 +1,6 @@
 const User = require("../database/models/User.schema");
 
-const { addSomethingToArray } = require("../utils/helpers");
+const { addSomethingToArray, projectIsPresent } = require("../utils/helpers");
 
 const getAllProjects = async (req, res) => {
   const projects = await User.find({}, { projects: 1 });
@@ -38,8 +38,6 @@ const createProject = async (req, res) => {
 
   res.send("Post request on /Project createProject");
 };
-
-const projectIsPresent = (arr, projectName) => arr.filter(eachObj => eachObj.projectName == projectName).length;
 
 const updateProject = (req, res) => {
   res.send("Patch request on /Project updateProject");
