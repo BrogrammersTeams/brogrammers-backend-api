@@ -12,7 +12,7 @@ const getUser = async (req, res) => {
 const createUser = async (req, res) => {
   const user = req.body;
 
-  const userArray = await User.find({ email: req.query.email });
+  const userArray = await User.find({ email: user.email });
 
   console.log(userArray);
 

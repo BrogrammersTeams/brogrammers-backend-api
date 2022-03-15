@@ -9,7 +9,8 @@ require("./database/mongo");
 const HomeRoute = require("./routes/Home");
 const UserRoute = require("./routes/User");
 const EmailRoute = require("./routes/Email");
-const ProjectRoute = require("./routes/Projects");
+const ProjectRoute = require("./routes/Project");
+const ProjectsRoute = require("./routes/Projects");
 const FileRoute = require("./routes/Files");
 
 const PORT = process.env.PORT || 5000;
@@ -23,6 +24,7 @@ app.use("/", HomeRoute);
 app.use("/user", UserRoute);
 app.use("/email", EmailRoute);
 app.use("/project", ProjectRoute);
+app.use("/projects", ProjectsRoute);
 app.use("/file", FileRoute);
 
 app.get("/:id", (req, res) => {
